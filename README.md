@@ -19,11 +19,6 @@ information.
 │   ├── model_train.py               # Stratified K-fold training script
 │   ├── pretrained_ckpt .pt          # Pretrained Swin Transformer checkpoint
 │   └── swinMM.py                    # Swin Transformer feature encoder
-├── nnUNet_3d_fullres_weight/
-│   ├── dataset.json
-│   ├── dataset_fingerprint.json
-│   ├── plans.json
-│   └── fold_0/ ... fold_4/          # nnU-Net fold checkpoints and logs
 ├── Pyradiomics/
 │   ├── extract_radiomics_features.py # PyRadiomics feature extraction
 │   ├── cox_auc.R                    # Cox model and AUC analysis
@@ -67,26 +62,6 @@ clusterProfiler, GSVA, survival, survminer, timeROC
 ```
 
 Most R scripts automatically check and install missing packages when executed.
-## Tumor Segmentation
-
-The folder `nnUNet_3d_fullres_weight/` contains five-fold nnU-Net 3D full
-resolution model checkpoints. These weights can be used with nnU-Net v2 for
-inference after preparing the data according to the nnU-Net format.
-
-Example:
-
-```bash
-nnUNetv2_predict \
-  -i /path/to/nnunet/imagesTs \
-  -o /path/to/nnunet/predictions \
-  -d DATASET_ID \
-  -c 3d_fullres \
-  -f 0 1 2 3 4
-```
-
-Replace `DATASET_ID` with the dataset identifier used in your local nnU-Net
-installation.
-
 ## Radiomics Feature Extraction
 
 Radiomics features are extracted from paired image and mask volumes using
