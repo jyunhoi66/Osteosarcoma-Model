@@ -34,7 +34,7 @@ information.
 ```
 ## Environment
 
-The Python code was developed with PyTorch, MONAI, nnU-Net, PyRadiomics, and
+The Python code was developed with PyTorch, MONAI, PyRadiomics, and
 common scientific Python packages. A CUDA-enabled GPU is recommended for
 deep-learning feature extraction, model training, and Grad-CAM visualization.
 
