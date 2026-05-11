@@ -46,13 +46,6 @@ pip install monai transformers timm scikit-learn pandas numpy scipy tensorboard
 pip install SimpleITK pyradiomics nibabel opencv-python
 ```
 
-For segmentation with nnU-Net, install nnU-Net separately following the official
-nnU-Net instructions:
-
-```bash
-pip install nnunetv2
-```
-
 The R scripts require R and common Bioconductor/CRAN packages, including:
 
 ```r
